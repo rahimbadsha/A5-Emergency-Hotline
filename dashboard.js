@@ -15,9 +15,15 @@ hearts.forEach(heart => {
 const callButtons = document.querySelectorAll('.call-btn');
 callButtons.forEach(button => {
     button.addEventListener('click', function() {
-        const serviceName   = getElementsID('service-name').innerText;
-        const serviceNumber = getElementsID('service-number').innerText; 
-        let bonusNumber   = getElementsID('bonus-number'); 
+        // Get service name and number from the clicked card by class
+        const card = button.closest('.parent-cards');
+        const serviceName = card.querySelector('.service-name').innerText;
+        const serviceNumber = card.querySelector('.service-number').innerText;
+        let bonusNumber = getElementsID('bonus-number');
+
+        //const serviceName   = getElementsID('service-name').innerText;
+        //const serviceNumber = getElementsID('service-number').innerText; 
+        //let bonusNumber   = getElementsID('bonus-number'); 
 
         // Decrement bonus number by 20 on each call
          let currentBonus = parseInt(bonusNumber.innerText);
@@ -26,6 +32,7 @@ callButtons.forEach(button => {
             alert('Not enough bonus to make a call. You need at least 20 bonus points.');
             return;
          } else {
+            // showing alert for calling
             alert(`Calling ${serviceName} at ${serviceNumber}...`);
             currentBonus = currentBonus - 20;
             bonusNumber.innerText = currentBonus
@@ -34,22 +41,23 @@ callButtons.forEach(button => {
             let callHistoryBlock = getElementsID('call-history-block');
             //callHistoryBlock.remove()
 
-            let sidebarServiceName = getElementsID('siderbar-service-name');
-            let sidebarServiceNumber = getElementsID('siderbar-service-number');
+            let sidebarServiceName = getElementsID('sidebar-service-name');
+            let sidebarServiceNumber = getElementsID('sidebar-service-number');
             let sidebarTime = getElementsID('sidebar-time');
 
             let currentTime = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true } );
+
+            
+            // Add multiple call history blocks
+            let newCallHistoryBlock = callHistoryBlock.cloneNode(true);
+            callHistoryBlock.classList.remove('hidden');
 
             sidebarServiceName.innerText = serviceName;
             sidebarServiceNumber.innerText = serviceNumber;
             sidebarTime.innerText = currentTime;
 
-            
-            // Add multiple call history blocks
-            let newCallHistoryBlock = callHistoryBlock.cloneNode(true);
             callHistoryBlock.parentNode.appendChild(newCallHistoryBlock);
 
-            callHistoryBlock.classList.remove('hidden');
         }
 
         
