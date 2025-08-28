@@ -48,44 +48,66 @@ callButtons.forEach(button => {
             let currentTime = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true } );
 
             
-            // Add multiple call history blocks
+            // clone call history blocks
             let newCallHistoryBlock = callHistoryBlock.cloneNode(true);
             callHistoryBlock.classList.remove('hidden');
 
+            // updating the clone block with new data
             sidebarServiceName.innerText = serviceName;
             sidebarServiceNumber.innerText = serviceNumber;
             sidebarTime.innerText = currentTime;
 
+            // append the new call history block to the parent
             callHistoryBlock.parentNode.appendChild(newCallHistoryBlock);
 
         }
-
-        
-
     });
 })
 
 // copy button function 
-let copyBtn = getElementsID('copy-btn');
-copyBtn.addEventListener('click', function(error_catch) {
-    const serviceNumber = getElementsID('service-number').innerText; 
-    // increment copy count
-    const copyCountBtn = getElementsID('copy-count-btn');
-    let currentCopyCount = parseInt(copyCountBtn.innerText);
-    currentCopyCount += 1;
-    copyCountBtn.innerText = currentCopyCount + ' copy';
+let copybtn = document.querySelectorAll('.copy-btn');
+copybtn.forEach(btn => {
+    btn.addEventListener('click', function(error_catch) {
+        const card = btn.closest('.parent-cards');
+        const serviceNumber = card.querySelector('.service-number').innerText;
 
-    // Copy to clipboard functionality
-    navigator.clipboard.writeText(serviceNumber)
-    .then(function() {
-        alert('Service number copied to clipboard: ' + serviceNumber);
-    })
-    .catch(error_catch => {
-        console.error('Could not copy text: ', error_catch);
+        // increment copy count
+        const copyCountBtn = getElementsID('copy-count-btn');
+        let currentCopyCount = parseInt(copyCountBtn.innerText);
+        currentCopyCount += 1;
+        copyCountBtn.innerText = currentCopyCount + ' copy';
+
+        // Copy to clipboard functionality
+        navigator.clipboard.writeText(serviceNumber)
+            .then(function() {
+                alert('Service number copied to clipboard: ' + serviceNumber);
+            })
+            .catch(error_catch => {
+                console.error('Could not copy text: ', error_catch);
+            });
     });
+});
 
-    console.log(copyBtn);
-})
+// let copyBtn = getElementsID('copy-btn');
+// copyBtn.addEventListener('click', function(error_catch) {
+//     const serviceNumber = getElementsID('service-number').innerText; 
+//     // increment copy count
+//     const copyCountBtn = getElementsID('copy-count-btn');
+//     let currentCopyCount = parseInt(copyCountBtn.innerText);
+//     currentCopyCount += 1;
+//     copyCountBtn.innerText = currentCopyCount + ' copy';
+
+//     // Copy to clipboard functionality
+//     navigator.clipboard.writeText(serviceNumber)
+//     .then(function() {
+//         alert('Service number copied to clipboard: ' + serviceNumber);
+//     })
+//     .catch(error_catch => {
+//         console.error('Could not copy text: ', error_catch);
+//     });
+
+//     console.log(copyBtn);
+// })
 
 
 // Clear button function 
@@ -97,7 +119,7 @@ clearBtn.addEventListener('click', function() {
 
     // removing all of the history blocks
     getAllHistoryBlocks.forEach(block => {
-        block.remove();
+        block.classList.add('hidden');
     })
     
 })
