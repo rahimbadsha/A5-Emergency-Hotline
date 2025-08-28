@@ -30,11 +30,11 @@
                     <img src="./assets/heart2.png" alt="">
                 </div>
                 <div class="w-[125px] h-[52] flex items-center justify-center gap-2 bg-[#ecfff0] p-2 rounded-full">
-                    <h3 class="text-[#000] text-base font-bold font-base">100</h3>
+                    <h3 id="bonus-number" class="text-[#000] text-base font-bold font-base">100</h3>
                     <img src="./assets/bonus-badge.png" alt="">
                 </div>
                 <div class="w-[125px] h-[52] bg-[#00A63E] p-2 rounded-full">
-                    <h3 class="text-white text-base text-center font-bold font-base">2 copy</h3>
+                    <h3 id="copy-count-btn" class="text-white text-base text-center font-bold font-base">0 copy</h3>
                 </div>
             </div>
         </div>
@@ -61,21 +61,21 @@
                     <h3 class="card-heart"><i class="fa-regular fa-heart"></i></h3>
                 </div>
 
-                <!-- cards 2 from here -->
+                <!-- cards 1 text from here -->
                 <div>
-                    <h1 class="font-bold text-2xl pt-3">Emergency Services</h1>
+                    <h1 id="service-name" class="font-bold text-2xl pt-3">Emergency Services</h1>
                     <p class="text-lg text-gray-500 pt-2">National Emergency Services</p>
                 </div>
                 
                 <div>
-                    <h1 class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
+                    <h1 id="service-number" class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
                     <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">All</h3>
                 </div>
 
                 <!-- card buttons  -->
                 <div class="flex justify-center gap-4 items-center mt-6">
-                    <button class="btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i class="fa-solid fa-phone"></i> Call</button>
+                    <button id="copy-btn" class="hover:bg-black hover:text-white btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
+                    <button class="hover:bg-gray-500 call-btn btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i class="fa-solid fa-phone"></i> Call</button>
 
                 </div>
 
@@ -88,24 +88,30 @@
                     <img src="./assets/police.png" alt="" class="max-w-[30px]">
                     <h3 class="card-heart"><i class="fa-regular fa-heart"></i></h3>
                 </div>
-
+            
+                <!-- cards 1 text from here -->
                 <div>
-                    <h1 class="font-bold text-2xl pt-3">Police</h1>
+                    <h1 id="service-name" class="font-bold text-2xl pt-3">Police</h1>
                     <p class="text-lg text-gray-500 pt-2">Police</p>
                 </div>
-                
+            
                 <div>
-                    <h1 class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
-                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">Police</h3>
+                    <h1 id="service-number" class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
+                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">police
+                    </h3>
                 </div>
-
+            
                 <!-- card buttons  -->
                 <div class="flex justify-center gap-4 items-center mt-6">
-                    <button class="btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i class="fa-solid fa-phone"></i> Call</button>
-
+                    <button id="copy-btn"
+                        class="hover:bg-black hover:text-white btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button
+                        class="hover:bg-gray-500 call-btn btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
+            
                 </div>
-
+            
             </div>
 
             <!-- card 3  -->
@@ -116,24 +122,30 @@
                     <img src="./assets/fire-service.png" alt="" class="max-w-[30px]">
                     <h3 class="card-heart"><i class="fa-regular fa-heart"></i></h3>
                 </div>
-
+            
+                <!-- cards 1 text from here -->
                 <div>
-                    <h1 class="font-bold text-2xl pt-3">Fire Serivce</h1>
-                    <p class="text-lg text-gray-500 pt-2">fire-service</p>
+                    <h1 id="service-name" class="font-bold text-2xl pt-3">Fire Service</h1>
+                    <p class="text-lg text-gray-500 pt-2">Fire Service</p>
                 </div>
-                
+            
                 <div>
-                    <h1 class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
-                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">Fire</h3>
+                    <h1 id="service-number" class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
+                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">Fire
+                    </h3>
                 </div>
-
+            
                 <!-- card buttons  -->
                 <div class="flex justify-center gap-4 items-center mt-6">
-                    <button class="btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i class="fa-solid fa-phone"></i> Call</button>
-
+                    <button id="copy-btn"
+                        class="hover:bg-black hover:text-white btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button
+                        class="hover:bg-gray-500 call-btn btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
+            
                 </div>
-
+            
             </div>
 
 
@@ -144,100 +156,118 @@
                     <img src="./assets/ambulance.png" alt="" class="max-w-[30px]">
                     <h3 class="card-heart"><i class="fa-regular fa-heart"></i></h3>
                 </div>
-
+            
+                <!-- cards 1 text from here -->
                 <div>
-                    <h1 class="font-bold text-2xl pt-3">Ambulance</h1>
-                    <p class="text-lg text-gray-500 pt-2">fire-service</p>
+                    <h1 id="service-name" class="font-bold text-2xl pt-3">Ambulance</h1>
+                    <p class="text-lg text-gray-500 pt-2">Ambulance</p>
                 </div>
-                
+            
                 <div>
-                    <h1 class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
-                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">Health</h3>
+                    <h1 id="service-number" class="font-bold xl:text-3xl text-2xl pt-5 pb-2">1994-99999</h1>
+                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">Ambulance
+                    </h3>
                 </div>
-
+            
                 <!-- card buttons  -->
                 <div class="flex justify-center gap-4 items-center mt-6">
-                    <button class="btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i class="fa-solid fa-phone"></i> Call</button>
-
+                    <button id="copy-btn"
+                        class="hover:bg-black hover:text-white btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button
+                        class="hover:bg-gray-500 call-btn btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
+            
                 </div>
-
+            
             </div>
 
             <!-- card 5  -->
             <div class="col-span-1 bg-white p-6 rounded-lg shadow-lg">
                 <!-- card top  -->
                 <div class="flex justify-between items-center gap-4">
-                    <img src="./assets/ambulance.png" alt="" class="max-w-[30px]">
+                    <img src="./assets/wo" alt="" class="max-w-[30px]">
                     <h3 class="card-heart"><i class="fa-regular fa-heart"></i></h3>
                 </div>
-
+            
+                <!-- cards 1 text from here -->
                 <div>
-                    <h1 class="font-bold text-2xl pt-3">Ambulance</h1>
-                    <p class="text-lg text-gray-500 pt-2">fire-service</p>
+                    <h1 id="service-name" class="font-bold text-2xl pt-3">Emergency Services</h1>
+                    <p class="text-lg text-gray-500 pt-2">National Emergency Services</p>
                 </div>
-                
+            
                 <div>
-                    <h1 class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
-                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">Health</h3>
+                    <h1 id="service-number" class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
+                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">All
+                    </h3>
                 </div>
-
+            
                 <!-- card buttons  -->
                 <div class="flex justify-center gap-4 items-center mt-6">
-                    <button class="btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i class="fa-solid fa-phone"></i> Call</button>
-
+                    <button id="copy-btn"
+                        class="hover:bg-black hover:text-white btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button
+                        class="hover:bg-gray-500 call-btn btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
+            
                 </div>
-
+            
             </div>
 
             <!-- card 6  -->
             <div class="col-span-1 bg-white p-6 rounded-lg shadow-lg">
                 <!-- card top  -->
                 <div class="flex justify-between items-center gap-4">
-                    <img src="./assets/ambulance.png" alt="" class="max-w-[30px]">
+                    <img src="./assets/emergency.png" alt="" class="max-w-[30px]">
                     <h3 class="card-heart"><i class="fa-regular fa-heart"></i></h3>
                 </div>
-
+            
+                <!-- cards 1 text from here -->
                 <div>
-                    <h1 class="font-bold text-2xl pt-3">Ambulance</h1>
-                    <p class="text-lg text-gray-500 pt-2">fire-service</p>
+                    <h1 id="service-name" class="font-bold text-2xl pt-3">Emergency Services</h1>
+                    <p class="text-lg text-gray-500 pt-2">National Emergency Services</p>
                 </div>
-                
+            
                 <div>
-                    <h1 class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
-                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">Health</h3>
+                    <h1 id="service-number" class="font-bold xl:text-3xl text-2xl pt-5 pb-2">999</h1>
+                    <h3 class="text-[#5C5C5C] text-base text-center font-normal w-[80px] h-[52] bg-[#F2F2F2] p-2 rounded-full">All
+                    </h3>
                 </div>
-
+            
                 <!-- card buttons  -->
                 <div class="flex justify-center gap-4 items-center mt-6">
-                    <button class="btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i class="fa-regular fa-copy"></i> Copy</button>
-                    <button class="btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i class="fa-solid fa-phone"></i> Call</button>
-
+                    <button id="copy-btn"
+                        class="hover:bg-black hover:text-white btn bg-white text-[#5C5C5C] text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-regular fa-copy"></i> Copy</button>
+                    <button
+                        class="hover:bg-gray-500 call-btn btn bg-[#00A63E] text-white text-base font-normal rounded-xl  w-1/2"><i
+                            class="fa-solid fa-phone"></i> Call</button>
+            
                 </div>
-
+            
             </div>
         </div>
 
         <!-- sidebar from here  -->
-        <div class="xl:col-span-1 lg:col-span-2">
+        <div class="xl:col-span-1 lg:col-span-1">
             <div class="col-span-1 bg-white p-6 rounded-lg shadow-lg">
                 <!-- sidebar top  -->
                 <div class="flex justify-between items-center gap-4">
                     <h1 class="font-bold text-xl"><i class="fa-regular fa-clock"></i> Call History</h1>
-                    <h3 class="w-[80px] h-[52] bg-[#00A63E] p-2 rounded-full text-white text-base text-center font-bold font-[16px]">clear</h3>
+                    <button type="button" id="clear-btn" class="w-[80px] h-[52] bg-[#00A63E] p-2 rounded-full text-white text-base text-center font-bold font-[16px]">clear</button>
                 </div>
 
             <!-- sidebar call list  -->
-                <div class="">
+                <div id="call-history-block" class="hidden history-block">
                     <div class="flex justify-between mt-5 bg-[#FAFAFA] p-3">
                         <div>
-                            <h1 class="font-semibold text-lg">Fire Service Number</h1>
-                            <hp class="font-normal text-lg text-gray-500">999</hp>
+                            <h1 id="siderbar-service-name" class="font-semibold text-lg">Fire Service Number</h1>
+                            <p id="siderbar-service-number" class="font-normal text-lg text-gray-500">999</p>
                         </div>
                     
                         <div>
-                            <p>11:36:58 AM</p>
+                            <p id="sidebar-time">11:36:58 AM</p>
                         </div>
                     </div>
                 </div>
