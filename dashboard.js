@@ -1,4 +1,4 @@
-// Heart counter functionality
+// Heart counter function
 
 const hearts = document.querySelectorAll('.card-heart');
 hearts.forEach(heart => {
@@ -11,7 +11,7 @@ hearts.forEach(heart => {
 })
 
 
-// Call button functionality
+// Call button function
 const callButtons = document.querySelectorAll('.call-btn');
 callButtons.forEach(button => {
     button.addEventListener('click', function() {
