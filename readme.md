@@ -1,6 +1,8 @@
 ## 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
+# getElementById:- To get a specific elements data from html we use getElementById() in javascript. we can only get one elements data using getElementById. 
 
+# getElementsByClassName: 
 ---
 
 ## 2. How do you create and insert a new element into the DOM?
